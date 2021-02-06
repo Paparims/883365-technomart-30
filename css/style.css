@@ -18,12 +18,15 @@
   --special-red:#CA2C37;
   --special-gray:#A9A9A9;
 
+  --special-stroke:#EAEAEA;
+
   --special-promo-green-light:#8ED78F;
   --special-promo-pink:#DC91D8;
 }
 
 /* Global */
 .page-body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: 'Cuprum', Arial, sans-serif;
@@ -35,7 +38,6 @@
 
 a {
   text-decoration: none;
-  color: var(--basic-white);
 }
 
 img {
@@ -61,23 +63,43 @@ img {
 .brand,
 .footer-site-menu,
 .footer-promo-menu,
-.btn-social {
+.btn-social,
+.filter-brand,
+.filter-power {
   list-style: none;
 }
-
 
 .btn-buy {
   color: var(--basic-white);
   background-color: var(--basic-green);
 }
 
-.btn-buy {}
+.btn-buy:hover,
+.btn-buy:focus {
+  background-color: var(--basic-green-light);
+  }
+
+.btn-buy:active {
+  background-color: var(--basic-green-dark);
+}
 
 .btn-bookmark {
   color: var(--special-blue);
   background-color: var(--basic-white);
-  border: 2px solid var(--basic-green);
+  border: 3px solid var(--basic-green);
 }
+
+.btn-bookmark:hover,
+.btn-bookmark:focus {
+  color: var(--special-blue);
+  background-color: var(--basic-white);
+  border: 3px solid var(--special-blue);
+}
+
+.btn-bookmark:active {
+  opacity: 0.5;
+}
+
 
 /* Glaobal Fonts PT Sans */
 .catalog-list,
@@ -100,22 +122,33 @@ img {
   background-color: var(--basic-gray-dark);
 }
 
+
+.cart-menu a,
+.header-site-menu a,
+.promo-table a,
+.footer-site-menu a {
+  color: var(--basic-white);
+}
+
+.cart-menu a:active,
+.header-site-menu a:active,
+.promo-table a:active,
+.footer-site-menu a:active,
+.footer-promo-menu a:active {
+  opacity: 0.5;
+}
+
 .main-navigation,
 .main-footer {
   background-color: var(--basic-gray);
   color: var(--basic-white);
 }
 
-
-
 /* Global section-style */
 .section-products,
 .section-service {
 
 }
-
-
-
 /*Buttons */
 .button {
   font-size: 14px;
@@ -129,27 +162,17 @@ img {
 
 .button:hover,
 .button:focus {
-  background-color: #CA2C37;
+  background-color: var(--special-red);
 }
 
 .button:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red-dark);
 }
-
-
-
 
 /* Main navigation */
 
-
-.logo-header {
-
-}
-
-
 .logo-header {
   width: 220px;
-  height: 42px;
   background-color: var(--basic-red);
 
 }
@@ -158,25 +181,31 @@ img {
   line-height: 18px;
 }
 
+.search-placeholder::placeholder {
+  color: var(--basic-white);
+  background-color: var(--basic-gray-dark);
+}
+
 .btn-confirm {
   background-color: var(--basic-green);
   width: 150px;
   text-align: center;
 }
-
+.btn-confirm:hover,
+.btn-confirm:focus {
+  background-color: var(--basic-green-light);
+}
 
 .info-text {
   font-style: italic;
   font-size: 16px;
   color: var(--basic-red);
-
 }
 
 .tel {
   color: var(--basic-red);
-  font-size: 30px;
-
-
+  font-size: 21px;
+  line-height: 30px;
 }
 .street {
   font-size: 14px;
@@ -184,12 +213,31 @@ img {
 }
 
 .btn-login,
-.btn-register {
+.btn-register,
+.btn-order,
+.btn-cab {
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-align: center;
 }
 
+.btn-login:hover,
+.btn-login:focus,
+.btn-register:hover,
+.btn-register:focus,
+.btn-order:hover,
+.btn-order:focus,
+.btn-cab:hover,
+.btn-cab:focus {
+  color: var(--basic-red);
+}
+
+.btn-login:active,
+.btn-register:active,
+.btn-cab:active,
+.btn-cab:active {
+  color: var(--basic-gray-light);
+}
 
 .btn-login {
   width: 121px;
@@ -215,8 +263,7 @@ img {
 }
 
 /* Section-PROMO */
-.promo-table
- {
+.promo-table {
 }
 
 .promo-material,
@@ -247,7 +294,10 @@ img {
 .promo-discount {
   background-color: var(--special-promo-green-light);
 }
-.promo-delivery {
+.promo-slide {
+  background-color: var(--special-stroke);
+  width: 620px;
+  height: 266px;
 }
 
 .btn-promo {
@@ -255,10 +305,12 @@ img {
 
 .btn-promo:hover,
 .btn-promo:focus {
-  background-color: var(basic-gray-light);
+  background-color: var(--basic-gray-light);
 }
 
-.btn-promo:
+.btn-promo:active {
+  background-color: var(--special-gray);
+}
 
 
 .btn-section {
@@ -269,6 +321,13 @@ img {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
 }
+
+.item-style {
+  border: 1px solid var(--special-stroke);
+  width: 220px;
+
+}
+
 
 /* section-catalog  */
 .product-name {
@@ -294,9 +353,6 @@ img {
   width: 141px;
 }
 
-
-
-
 /* section-service */
 .section-service {
 
@@ -307,18 +363,40 @@ img {
 
 }
 
-
-
 .btn-service {
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-white);
   background-color: var(--basic-gray);
 }
+
+.btn-service:hover,
+.btn-service:focus {
+  background-color: var(--basic-gray-dark)
+}
+
 .btn-service:active {
   color: var(--basic-gray);
   background-color: var(--basic-white);
 }
+
+.brand {
+  width: 220px;
+  height: 145px;
+  background-color: var(--basic-white);
+}
+
+
+.brand:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.brand:active {
+  opacity: 0.5;
+}
+
+
 .delivery,
 .garant,
 .credit {
@@ -326,23 +404,17 @@ img {
   line-height: 30px;
 }
 
+.delivery {
+}
+.garant {
+}
+.credit {
+}
 
-
-.delivery {}
-.garant {}
-.credit {}
-
-
+.btn-credit {
+}
 /* Section about-company */
 .contrahens {
-}
-
-.about-left {
-
-}
-
-.about-right {
-
 }
 
 .company {
@@ -351,15 +423,47 @@ img {
   text-transform: uppercase;
 }
 
-.map {
+.about-left {
+}
 
+.about-right {
+}
+
+
+.map {
+}
+
+.btn-contact {
 }
 
 /* Footer */
+
+
 .footer-promo-menu a,
 .copyright-htmlacademy a {
   color: var(--special-yellow);
 }
+.footer-top a:hover,
+.footer-top a:focus,
+.footer-promo-menu a:hover,
+.footer-promo-menu a:focus,
+.copyright-htmlacademy a:hover,
+.copyright-htmlacademy a:hover
+ {
+  text-decoration: underline;
+}
+
+.copyright-htmlacademy a:active {
+  color: var(--basic-red);
+}
+
+.tel-footer {
+  color :var(--basic-white);
+}
 
 
+/* catalog */
 
+.brand:active {
+  opacity: 0.5;
+}
