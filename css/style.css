@@ -17,12 +17,20 @@
   --special-yellow:#FFBF47;
   --special-red:#CA2C37;
   --special-gray:#A9A9A9;
+  --special-dark:#1D2739;
 
   --special-stroke:#EAEAEA;
 
   --special-promo-green-light:#8ED78F;
   --special-promo-pink:#DC91D8;
 }
+
+/*Grid */
+.page {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* Global */
 .page-body {
@@ -33,6 +41,11 @@
   line-height: 24px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 
@@ -65,9 +78,15 @@ img {
 .footer-promo-menu,
 .btn-social,
 .filter-brand,
-.filter-power {
+.filter-power,
+.page-variant,
+.sort-list,
+.sort-pg {
   list-style: none;
 }
+
+
+
 
 .btn-buy {
   color: var(--basic-white);
@@ -103,8 +122,12 @@ img {
 
 /* Glaobal Fonts PT Sans */
 .catalog-list,
-.info-slider {
-  font-family: 'PT Sans', sans-serif;
+.info-slider,
+.breadcrumps,
+.title-filter,
+.page-list,
+.filter-button {
+  font-family: 'PT Sans', Arial, sans-serif;
 }
 
 
@@ -113,7 +136,9 @@ img {
 .main-header,
 .pop-products,
 .section-brands,
-.section-services {
+.section-services,
+.catalog-description,
+.container-filter {
   background-color: var(--basic-background);
 }
 
@@ -186,6 +211,11 @@ img {
   background-color: var(--basic-gray-dark);
 }
 
+.btn-cart-current {
+ width: 136px;
+}
+
+
 .btn-confirm {
   background-color: var(--basic-green);
   width: 150px;
@@ -213,13 +243,23 @@ img {
 }
 
 .btn-login,
-.btn-register,
-.btn-order,
-.btn-cab {
+.btn-register {
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-align: center;
 }
+
+.menu-cabinet {
+  background-color: var(--basic-white);
+  width: 299px;
+}
+
+
+.btn-order,
+.btn-cab {
+  color: var(--basic-black);
+}
+
 
 .btn-login:hover,
 .btn-login:focus,
@@ -246,11 +286,14 @@ img {
   width: 150px;
 }
 
+.header-site-menu li:hover,
+.header-site-menu li:focus {
+  background-color: var(--basic-gray-dark);
+}
 
-
-
-
-
+.header-site-menu li:active {
+  background-color: var(--special-dark);
+}
 
 /* Section */
 
@@ -318,18 +361,76 @@ img {
 }
 
 .catalog-list {
-  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
 }
 
 .item-style {
   border: 1px solid var(--special-stroke);
   width: 220px;
-
 }
 
 
 /* section-catalog  */
+
+.breadcrumps,
+.sort-form {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumps a {
+  color: var(--basic-black);
+}
+
+.sort-list label {
+	opacity: 0.3;
+	border-bottom: 1px dotted var(--basic-red);
+}
+
+.sort-list label:hover,
+.sort-list label:focus {
+  color: var(--basic-black);
+	border-bottom: 1px solid var(--basic-red);
+  opacity: 1;
+}
+
+.sort-check:checked + label {
+  color: var(--basic-red);
+  opacity: 1;
+  border-bottom: 0px;
+}
+
+.filter-brand,
+.filter-power {
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-gray-light);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  border: 1px solid var(--basic-gray-light);
+}
+
+.filter-button:active {
+  border: 1px solid var(--basic-red);
+}
+
+
+
+
+
+
 .product-name {
   font-size: 18px;
   line-height: 20px;
@@ -353,14 +454,57 @@ img {
   width: 141px;
 }
 
-/* section-service */
-.section-service {
+.page-current {
+  font-size: 13px;
+  align-content: center;
+  background-color: var(--basic-red);
+}
+
+.page-variant a {
+  font-size: 13px;
+  line-height: 18px;
+  border: 1px solid #E5E5E5;
+  color: var(--basic-black);
+}
+
+.page-variant a:hover,
+.page-variant a:focus {
+  border: 1px solid var(--basic-gray-light);
+}
+
+.page-variant a:active {
+  border: 1px solid var(--basic-red);
+}
+
+.page-current a {
+  color: var(--basic-white);
+  border:none;
+}
+
+.page-current a:hover,
+.page-current a:focus {
+  border:none;
+}
+
+.page-next a {
 
 }
 
+
+/* filter-catalog */
+
+.title-filter {
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+
+/* section-service */
+
+
 .info-slider {
   font-size: 13px;
-
 }
 
 .btn-service {
@@ -437,8 +581,6 @@ img {
 }
 
 /* Footer */
-
-
 .footer-promo-menu a,
 .copyright-htmlacademy a {
   color: var(--special-yellow);
@@ -467,3 +609,5 @@ img {
 .brand:active {
   opacity: 0.5;
 }
+
+
