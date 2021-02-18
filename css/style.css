@@ -70,6 +70,7 @@ img {
 .cart-menu,
 .header-contact-list,
 .catalog-list,
+.catalog-list-2,
 .brand,
 .footer-site-menu,
 .footer-promo-menu,
@@ -115,8 +116,11 @@ img {
 
 /* Glaobal Fonts PT Sans */
 .catalog-list,
+.catalog-list-2,
 .info-slider,
 .breadcrumps,
+.sort-crit,
+.sort-title,
 .title-filter,
 .page-list,
 .filter-button {
@@ -287,6 +291,10 @@ img {
   justify-self: end;
 }
 
+.cabinet {
+  justify-self: end;
+}
+
 .btn-login,
 .btn-register {
   background-color: var(--basic-white);
@@ -297,6 +305,11 @@ img {
 .menu-cabinet {
   background-color: var(--basic-white);
   width: 299px;
+  text-align: center;
+}
+
+.btns-cabinet {
+  text-align: center;
 }
 
 
@@ -344,7 +357,7 @@ img {
 }
 
 .cart-menu li,
-.header-site-menu li{
+.header-site-menu li {
   display: inline;
 }
 
@@ -479,6 +492,15 @@ img {
   font-weight: 700;
 }
 
+.catalog-list-2 {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .item-style {
   border: 1px solid var(--special-stroke);
   width: 218px;
@@ -488,7 +510,8 @@ img {
 /* section-catalog  */
 
 .breadcrumps,
-.sort-form {
+.sort-form,
+.sort-crit {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -496,6 +519,42 @@ img {
 
 .breadcrumps a {
   color: var(--basic-black);
+}
+
+.section-sort {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+
+.sort-form {
+
+}
+
+.sort-title {
+  font-size: 13px;
+  line-height: 24px;
+  background-color: var(--basic-background);
+}
+
+.sort-crit {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns:min-content auto max-content;
+  background-color: var(--basic-background);
+}
+
+.sort-list li {
+  display: inline;
+}
+
+.sort-list,
+.filter-brand,
+.filter-power {
+  margin: 0;
+  padding: 0;
 }
 
 .sort-list label {
@@ -563,6 +622,15 @@ img {
   background-color: var(--basic-red);
   width: 141px;
 }
+
+.page-list {
+  padding: 0;
+}
+
+.page-list li {
+  display: inline;
+}
+
 
 .page-current {
   font-size: 13px;
@@ -632,6 +700,7 @@ img {
 }
 
 .slider-services {
+  margin-top: 70px;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -647,8 +716,9 @@ img {
 
 .info-slider {
   font-size: 13px;
-  margin-bottom: 70px;
+  margin-bottom: 0;
 }
+
 .btn-service {
   font-size: 21px;
   line-height: 30px;
@@ -728,6 +798,11 @@ img {
 .btn-contact {
 }
 
+
+.catalog-description {
+  margin: 0;
+  padding: 0;
+}
 /* Footer */
 
 
