@@ -101,6 +101,8 @@ img {
   color: var(--special-blue);
   background-color: var(--basic-white);
   border: 3px solid var(--basic-green);
+  margin: 0;
+  padding: 12px 0;
 }
 
 .btn-bookmark:hover,
@@ -150,6 +152,9 @@ img {
 .main-footer {
   background-color: var(--basic-gray-dark);
 }
+.cart-menu {
+  margin: 0;
+}
 
 .cart-menu ul {
   padding: 0;
@@ -173,7 +178,7 @@ img {
 
 .main-navigation,
 .main-footer {
-  background-color: var(--basic-gray);
+  background-color: var(--special-blue);
   color: var(--basic-white);
 }
 
@@ -213,14 +218,13 @@ img {
 
 .logo-header {
   width: 220px;
-  height: 47px;
+  height: 42px;
   background-color: var(--basic-red);
-
+  box-shadow: 0 5px 0 var(--basic-red-dark);
 }
 
 .header-cart {
-  display: grid;
-  grid-template-columns: auto max-content;
+  display: flex;
   justify-content: space-between;
   font-size: 17px;
   line-height: 18px;
@@ -239,6 +243,7 @@ img {
   background-color: var(--basic-green);
   width: 150px;
   text-align: center;
+  padding: 12px 0;
 }
 
 .btn-confirm:hover,
@@ -251,25 +256,31 @@ img {
   grid-template-columns: min-content auto;
 }
 
-
 .mid-header {
-  padding-bottom: 60px;
+  padding-bottom: 65px;
   background-color: var(--basic-background);
+}
+
+.main-navigation {
+  padding: 0;
+  box-shadow: 0 5px 0 var(--basic-gray-dark);
 }
 
 .header-contact-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-.header-contact-list {
   margin: 0;
-  padding-top: 46px;
+  margin-left: 23px;
+  padding: 0;
+  padding-top: 41px;
+  padding-bottom: 45px;
 }
 
 .info-text {
   font-size: 16px;
+  line-height: 23px;
   color: var(--basic-red);
+  margin: 0;
 }
 
 .tel {
@@ -344,6 +355,22 @@ img {
   width: 150px;
 }
 
+.header-site-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 25px;
+  font-size: 18px;
+  line-height: 24px;
+  height: 55px;
+}
+
+.header-site-menu a {
+  display: block;
+  padding: 16px 28px;
+}
+
+
 .header-site-menu li:hover,
 .header-site-menu li:focus {
   background-color: var(--basic-gray-dark);
@@ -351,9 +378,6 @@ img {
 
 .header-site-menu li:active {
   background-color: var(--special-dark);
-}
-.main-navigation {
-  padding: 0;
 }
 
 .cart-menu li,
@@ -484,6 +508,7 @@ img {
 }
 
 .catalog-list {
+  margin: 20px 0px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -680,6 +705,7 @@ img {
 
 .pop-brands,
 .pop-products {
+  height: 89px;
   padding-left: 28px;
   display: grid;
   grid-template-columns: auto auto;
