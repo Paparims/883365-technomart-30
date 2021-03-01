@@ -270,15 +270,16 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0;
-  margin-left: 23px;
+  margin-left: 30px;
   padding: 0;
-  padding-top: 41px;
-  padding-bottom: 45px;
+  padding-top: 43px;
+  padding-bottom: 44px;
 }
 
 .info-text {
   font-size: 16px;
   line-height: 23px;
+  font-weight: 400;
   color: var(--basic-red);
   margin: 0;
 }
@@ -291,6 +292,7 @@ img {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+
 }
 
 .street {
@@ -510,12 +512,14 @@ img {
 .catalog-list {
   margin: 20px 0px;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 18px;
   font-weight: 700;
 }
+
+.catalog-list
 
 .catalog-list-2 {
   padding: 0;
@@ -529,6 +533,14 @@ img {
 .item-style {
   border: 1px solid var(--special-stroke);
   width: 218px;
+  min-height: 316px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-style figure {
+  margin: 0;
 }
 
 
@@ -626,6 +638,7 @@ img {
 }
 
 .product-name {
+  margin: 0;
   font-size: 18px;
   line-height: 20px;
 }
@@ -638,6 +651,7 @@ img {
 }
 
 .price-old {
+  margin: 0;
   text-decoration: line-through;
   color:var(--special-gray);
 }
@@ -646,6 +660,9 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-red);
   width: 141px;
+  height: 38px;
+  margin: 0;
+  margin-bottom: 21px;
 }
 
 .page-list {
@@ -766,6 +783,7 @@ img {
   width: 220px;
   height: 145px;
   background-color: var(--basic-white);
+  border: 1px solid var(--special-stroke);
 }
 
 .brand:hover {
