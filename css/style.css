@@ -97,15 +97,17 @@ img {
   background-color: var(--basic-green-dark);
 }
 
-.btn-bookmark {
+.btn-in-bookmark {
   color: var(--special-blue);
   background-color: var(--basic-white);
   border: 3px solid var(--basic-green);
   margin: 0;
   padding: 12px 0;
+  width: 150px;
+  text-align: center;
 }
 
-.btn-bookmark:hover,
+.btn-in-bookmark:hover,
 .btn-bookmark:focus {
   color: var(--special-blue);
   background-color: var(--basic-white);
@@ -152,8 +154,10 @@ img {
 .main-footer {
   background-color: var(--basic-gray-dark);
 }
+
 .cart-menu {
   margin: 0;
+  display: flex;
 }
 
 .cart-menu ul {
@@ -223,11 +227,15 @@ img {
   box-shadow: 0 5px 0 var(--basic-red-dark);
 }
 
+.logo-header-img {
+  padding: 12px 56px;
+}
+
 .header-cart {
   display: flex;
   justify-content: space-between;
-  font-size: 17px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .search-placeholder::placeholder {
@@ -239,11 +247,20 @@ img {
  width: 136px;
 }
 
-.btn-confirm {
-  background-color: var(--basic-green);
+.btn-bookmarks,
+.btn-cart-null {
   width: 150px;
   text-align: center;
-  padding: 12px 0;
+  padding-top: 10px;
+}
+
+
+
+.btn-confirm {
+  background-color: var(--basic-green);
+  text-align: center;
+  padding-top: 10px;
+  width: 150px;
 }
 
 .btn-confirm:hover,
@@ -272,8 +289,8 @@ img {
   margin: 0;
   margin-left: 30px;
   padding: 0;
-  padding-top: 43px;
-  padding-bottom: 44px;
+  padding-top: 46px;
+  padding-bottom: 43px;
 }
 
 .info-text {
@@ -370,6 +387,7 @@ img {
 .header-site-menu a {
   display: block;
   padding: 16px 28px;
+  padding-bottom: 15px;
 }
 
 
@@ -392,6 +410,9 @@ img {
 
 
 .title-text {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 29px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -535,6 +556,7 @@ img {
   width: 218px;
   min-height: 316px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
