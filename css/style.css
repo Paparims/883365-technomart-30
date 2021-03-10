@@ -199,6 +199,9 @@ img {
 
 /*Buttons */
 .button {
+  display: inline-block;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -278,6 +281,7 @@ img {
   background-color: var(--basic-background);
 }
 
+
 .main-navigation {
   padding: 0;
   box-shadow: 0 5px 0 var(--basic-gray-dark);
@@ -286,14 +290,13 @@ img {
 .header-contact-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0;
-  margin-left: 30px;
   padding: 0;
   padding-top: 46px;
-  padding-bottom: 43px;
+  padding-bottom: 44px;
 }
 
-.info-text {
+.info-text h1 {
+  padding-left: 30px;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
@@ -302,14 +305,15 @@ img {
 }
 
 .tel {
+  display: flex;
   width: 270px;
-  height: 45px;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
-
+  padding-top: 4px;
+  padding-bottom: 5px;
 }
 
 .street {
@@ -318,7 +322,10 @@ img {
 }
 
 .login {
+  margin-top: 12px;
   justify-self: end;
+  font-size: 21px;
+  line-height: 21px;
 }
 
 .cabinet {
@@ -327,10 +334,26 @@ img {
 
 .btn-login,
 .btn-register {
+  margin-left: 5px;
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-align: center;
+
 }
+
+.btn-register {
+  padding: 10px 24px;
+  padding-bottom: 11px;
+}
+
+.btn-login {
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-right: 27px;
+  padding-bottom: 11px;
+}
+
+
 
 .menu-cabinet {
   background-color: var(--basic-white);
@@ -523,11 +546,9 @@ img {
 }
 
 .btn-section {
-  width: 253px;
-  height: 38px;
-  margin: auto;
-  margin-right: 19px;
-
+  width: 192px;
+  margin: 25px 14px 26px;
+  text-align: center;
 }
 
 .catalog-list {
@@ -752,7 +773,9 @@ img {
 }
 
 .list-brands {
+  margin: 0;
   padding: 0;
+  padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -768,6 +791,7 @@ img {
   margin-top: 70px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  min-height: 285px;
 }
 
 .slider-control {
@@ -787,25 +811,36 @@ img {
 .btn-service {
   font-size: 21px;
   line-height: 30px;
+  width: 240px;
+  height: 61px;
+  border: none;
   color: var(--basic-white);
   background-color: var(--special-blue);
 }
 
 .btn-service:hover,
 .btn-service:focus {
-  background-color: var(--basic-gray-dark)
+  background-color: var(--basic-gray-dark);
+  border: none;
+  outline: none;
 }
 
 .btn-service:active {
   color: var(--special-blue);
   background-color: var(--basic-white);
+  border: none;
+  outline: none;
 }
 
 .brand {
-  width: 220px;
-  height: 145px;
+  width: 218px;
+  height: 143px;
   background-color: var(--basic-white);
   border: 1px solid var(--special-stroke);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .brand:hover {
@@ -856,6 +891,24 @@ img {
 .about-left,
 .about-right {
   font-size: 13px;
+}
+
+.about-right {
+  padding-left: 12px;
+}
+
+.about-left h3,
+.about-right h3{
+  margin: 0px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.about-left p,
+.about-right p {
+  margin-top: 24px;
 }
 
 .map {
