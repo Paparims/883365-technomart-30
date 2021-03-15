@@ -1,4 +1,52 @@
 /* Variables */
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --basic-white:#FFF;
   --basic-black:#000;
@@ -74,7 +122,7 @@ img {
 .brand,
 .footer-site-menu,
 .footer-promo-menu,
-.btn-social,
+.socials,
 .filter-brand,
 .filter-power,
 .page-variant,
@@ -156,17 +204,14 @@ img {
 }
 
 .cart-menu {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0px;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
-.cart-menu ul {
-  padding: 0;
-  margin: 0;
+.cart-menu li {
 }
 
 .cart-menu a,
@@ -260,19 +305,22 @@ img {
 }
 
 .btn-cart-current {
- width: 136px;
 }
 
-.bth-menu {
-  display: block;
-  text-align: center;
-  width: 100%;
-  max-width: 150px;
-  padding: 10px 16px 8px;
+.button-menu {
+  display: inline-block;
+  width: 133px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  text-align: right;
+  color:var(--basic-white);
+  vertical-align: middle;
+  border: none;
 }
 
 .btn-confirm {
   background-color: var(--basic-green);
+  padding-right: 17px;
 }
 
 .btn-confirm:hover,
@@ -302,7 +350,7 @@ img {
   justify-content: space-between;
   padding: 0;
   padding-top: 43px;
-  padding-bottom: 43px;
+  padding-bottom: 35px;
 }
 
 .info-text h1 {
@@ -316,23 +364,39 @@ img {
   color: var(--basic-red);
 }
 
-.tel {
+.contact {
   display: flex;
-  max-width: 270px;
-  color: var(--basic-red);
-  border: 3px solid var(--basic-white);
+  flex-wrap: wrap;
+  max-width: 271px;
+  width: 100%;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
+  padding-top: 3px;
+  padding-left: 29px;
+}
+
+
+.tel {
+  color: var(--basic-red);
+  border: 3px solid var(--basic-white);
+  padding-top: 4px;
+  padding-left: 53px;
+  padding-right: 42px;
+  padding-bottom: 5px;
 }
 
 .street {
   font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
   color: var(--basic-gray-dark);
+  padding: 4px 10.5px;
 }
 
 .login {
-  margin-top: 12px;
+  margin-top: 15px;
   justify-self: end;
   font-size: 21px;
   line-height: 21px;
@@ -990,12 +1054,13 @@ img {
 
 .footer-mid {
   padding-left: 3px;
+  margin-bottom: 54px;
 }
 
 .footer-adress {
   margin: 0;
   margin-top: 11px;
-  margin-right: 51px;
+  margin-right: 52px;
   flex-grow: 0;
 }
 
@@ -1011,6 +1076,11 @@ img {
 .footer-bot {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-left: 9px;
+  padding-top: 15px;
 }
 
 .footer-bot-backround {
@@ -1018,12 +1088,13 @@ img {
 }
 
 
-.btn-social {
+.socials {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   justify-self: center;
 }
 
-.btn-social li,
 .footer-site-menu li,
 .footer-promo-menu li {
   display: inline-block;
