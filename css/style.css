@@ -61,7 +61,6 @@
   --basic-background:#F1F5F7;
 
   --special-blue:#32425C;
-  --special-light-blue:#3BBCE3;
   --special-yellow:#FFD180;
   --special-red:#CA2C37;
   --special-gray:#A9A9A9;
@@ -69,8 +68,11 @@
 
   --special-stroke:#EAEAEA;
 
-  --special-promo-green-light:#8ED78F;
-  --special-promo-pink:#DC91D8;
+  --promo-yellow:#FFBF47;
+  --promo-light-blue:#3BBCE3;
+  --promo-light-green:#8ED78F;
+  --promo-pink:#DC91D8;
+
 }
 
 /*Grid */
@@ -376,6 +378,7 @@ img {
 .contact {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   max-width: 271px;
   width: 100%;
   font-size: 21px;
@@ -391,7 +394,7 @@ img {
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
   padding-top: 4px;
-  padding-left: 53px;
+  padding-left: 72px;
   padding-right: 42px;
   padding-bottom: 5px;
 }
@@ -401,7 +404,9 @@ img {
 	position: absolute;
 	width: 19px;
 	height: 19px;
-	background-image: url(/img/icons/icon-phone.svg);
+  left: 46px;
+  top: 16px;
+	background-image: url(../img/icons/icon-phone.svg);
 }
 
 .street {
@@ -437,7 +442,6 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-align: center;
-
 }
 
 .btn-register {
@@ -564,27 +568,36 @@ img {
 .promo-technics p,
 .promo-discount p,
 .promo-delivery p {
-  margin-left: 23px;
-  margin-top: 20px;
+  margin-left: 22px;
+  margin-top: 21px;
   margin-bottom: 14px;
 }
 
 .promo-material {
   grid-column: 1;
   grid-row: 1;
-  background-color: var(--special-yellow);
+  background-color: var(--promo-yellow);
+  background-image: url(../img/icons/icon-materials.svg);
+  background-position: top 31px right 43px;
+  background-repeat: no-repeat;
 }
 
 .promo-tool {
   grid-column: 2;
   grid-row: 1;
-  background-color: var(--special-light-blue);
+  background-color: var(--promo-light-blue);
+  background-image: url(../img/icons/icon-tools.svg);
+  background-repeat: no-repeat;
+  background-position: top 34px right 31px;
 }
 
 .promo-technics {
   grid-column: 3;
   grid-row: 1;
-  background-color: var(--special-promo-pink)
+  background-color: var(--promo-pink);
+  background-image: url(../img/icons/icon-technics.svg);
+  background-repeat: no-repeat;
+  background-position: top 31px right 31px;
 }
 
 .promo-slide {
@@ -611,13 +624,19 @@ img {
 .promo-discount {
   grid-column: 3;
   grid-row: 2;
-  background-color: var(--special-promo-green-light);
+  background-color: var(--promo-light-green);
+  background-image: url(../img/icons/icon-discount.svg);
+  background-repeat: no-repeat;
+  background-position: top 26px right 45px;
 }
 
 .promo-delivery {
   grid-column: 3;
   grid-row: 3;
-  background-color: var(--special-yellow);
+  background-color: var(--promo-yellow);
+  background-image: url(../img/icons/icon-delivery.svg);
+  background-repeat: no-repeat;
+  background-position: top 32px right 32px;
 }
 
 .btn-promo {
@@ -652,9 +671,7 @@ img {
   font-weight: 700;
 }
 
-.catalog-list
-
-.catalog-list-2 {
+.catalog-list-grid {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -664,24 +681,69 @@ img {
 }
 
 .item-style {
-  border: 1px solid var(--special-stroke);
-  width: 218px;
-  min-height: 316px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  border: 1px solid var(--special-stroke);
+  width: 218px;
+  min-height: 316px;
 }
 
-.item-style figure {
+.item-image {
+  margin: 0px;
   width: 100%;
-  height: 170px;
+  min-height: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  object-fit: contain;
 }
+
+.item-name {
+  order: 1;
+  display: block;
+  position: relative;
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  margin: 5px 15px;
+}
+
+.price {
+  order: 1;
+  margin: 0px;
+  padding: 0;
+  font-size: 17px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.price-old {
+  margin: 0;
+  margin-bottom: 14px;
+  text-decoration: line-through;
+  color:var(--special-gray);
+}
+
+.price-new {
+  margin: 0;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  border-radius: 3px;
+  background-image: linear-gradient(45deg, transparent 90%, var(--basic-white) 10%), linear-gradient(135deg, transparent 90%, var(--basic-white) 10%);
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 142px;
+  margin-bottom: 20px;
+  padding: 10px 0px;
+}
+
+
 
 .btn-in-bookmark-buy {
   width: 100%;
@@ -720,23 +782,16 @@ img {
   gap: 20px;
 }
 
-
-.sort-form {
-
-}
-
 .sort-title {
   text-transform: uppercase;
   font-size: 13px;
   margin: 0px;
   padding: 0px;
-  background-color: var(--basic-gray-light);
 }
 
 .sort-crit {
   display: flex;
   flex-wrap: wrap;
-  text-transform: uppercase;
   justify-content: space-between;
   margin-top: 20px;
   padding-bottom: 0px;
@@ -798,53 +853,31 @@ img {
   border: 1px solid var(--basic-red);
 }
 
-.product-name {
-  margin: 0;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  margin: 5px 15px;
-}
 
-.price-old,
-.price {
-  font-size: 17px;
-  line-height: 18px;
-  text-align: center;
-}
 
-.price-old {
-  margin: 0;
-  text-decoration: line-through;
-  color:var(--special-gray);
-}
-
-.price {
-  color: var(--basic-white);
-  background-image: url(../img/icons/red-button.svg);
-  position: relative;
-  background-repeat: no-repeat;
-  width: 141px;
-  height: 38px;
-  margin: 0;
-  padding-top: 10px;
-  margin-left: 15px;
-  margin-bottom: 10px;
-}
-
-.page-list {
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.page-list li {
-  display: inline;
+.pagination-item a {
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid var(--basic-red);
+}
+
+.pagination-item a:active {
+  background-color: var(--basic-red);
+  border: none;
 }
 
 
 .page-current {
   font-size: 13px;
   align-content: center;
-  background-color: var(--basic-red);
 }
 
 .page-variant a {
@@ -1173,3 +1206,10 @@ img {
 }
 
 
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: var (var(--basic-white))
+}
