@@ -29,19 +29,19 @@
         </div>
       </div>
       <div class="mid-header">
-          <ul class="header-contact-list container">
-            <li class="info-text">
-              <h1><i>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</i></h1>
-            </li>
-            <li class="contact">
-              <a class="tel"  href="tel:+78125550555">+7 (812) 555-05-55</a>
-              <span class="street">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-            </li>
-            <li class="login">
-              <a class="btn-login" href="#">Войти</a>
-              <a class="btn-register" href="#">Регистрация</a>
-            </li>
-         </ul>
+        <ul class="header-contact-list container">
+          <li class="info-text">
+            <h1><i>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</i></h1>
+          </li>
+          <li class="contact">
+            <a class="tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <span class="street">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          </li>
+          <li class="login">
+            <a class="btn-profile btn-login" href="#">Войти</a>
+            <a class="btn-profile btn-register" href="#">Регистрация</a>
+          </li>
+        </ul>
         <div class="main-navigation container">
           <ul class="header-site-menu">
             <li><a href="index.html">Главная</a></li>
@@ -55,49 +55,51 @@
         </div>
       </div>
     </header>
-    <main >
+    <main>
       <section class="container">
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="promo-table">
-          <div class="promo-material">
+          <div class="promo-card promo-material new">
             <p>Материалы</p>
             <a class="btn-promo" href="#">На любой вкус</a>
           </div>
-          <div class="promo-tool">
+          <div class="promo-card promo-tool">
             <p>Инструмент</p>
             <a class="btn-promo" href="#">На все случаи</a>
           </div>
-          <div class="promo-technics">
+          <div class="promo-card promo-technics">
             <p>Техника</p>
-            <a class="btn-promo" href="#">На 350 товаров</a>
+            <a class="btn-promo" href="#">Для стройки</a>
           </div>
-          <div class="promo-slide">
-            <div>
-              <img src="img/punchers.jpg" width="620" height="266" alt="Перфораторы" class="visually-hidden">
-              <p>Перфораторы</p>
-              <span>Настоящие мужские игрушки</span>
-            </div>
-            <div class="visually-hidden">
-              <img src="img/drill.jpg" width="620" height="266" alt="Дрели" class="visually-hidden">
-              <p>Дрели</p>
-              <span>Соседям на радость</span>
-            </div>
+          <section class="promo-slide">
+            <ul class="slider">
+              <li>
+                <img src="img/punchers.jpg" width="620" height="266" alt="Перфораторы" class="visually-hidden">
+                <p>Перфораторы</p>
+                <span>Настоящие мужские игрушки</span>
+              </li>
+              <li class="slider-2 visually-hidden">
+                <img src="img/drill.jpg" width="620" height="266" alt="Дрели" class="visually-hidden">
+                <p>Дрели</p>
+                <span>Соседям на радость</span>
+              </li>
+            </ul>
             <button class="btn-left" type="button">Влево</button>
             <button class="btn-right" type="button">Вправо</button>
             <a class="button btn-section" href="catalog.html">Открыть каталог</a>
-          </div>
-          <div class="promo-discount">
+          </section>
+          <div class="promo-card promo-discount">
             <p>Скидки 50%</p>
             <a class="btn-promo" href="#">На 350 товаров</a>
           </div>
-          <div class="promo-delivery">
+          <div class="promo-card promo-delivery">
             <p>Доставка</p>
             <a class="btn-promo" href="#">Бесплатно</a>
           </div>
         </div>
       </section>
 
-      <section class="container section-products">
+      <section class="section-products container">
         <div class="pop-products">
           <h2 class="title-text">Популярные товары:</h2>
           <a href="" class="button btn-section">Все популярные товары</a>
@@ -118,7 +120,7 @@
               <p class="price-new">25500 Р.</p>
             </div>
           </li>
-          <li class="item-style">
+          <li class="item-style new">
             <div class="btn-in-bookmark-buy">
               <button class="btn-buy">Купить</button>
               <button class="btn-in-bookmark">В закладки</button>
@@ -148,7 +150,7 @@
               <p class="price-new">25500 Р.</p>
             </div>
           </li>
-          <li class="item-style">
+          <li class="item-style new">
             <div class="btn-in-bookmark-buy">
               <button class="btn-buy">Купить</button>
               <button class="btn-in-bookmark">В закладки</button>
@@ -163,7 +165,7 @@
               <p class="price-new">12500 Р.</p>
             </div>
           </li>
-         </ul>
+        </ul>
       </section>
 
       <section class="section-brands container">
@@ -195,20 +197,17 @@
            </div>
             <div class="delivery">
               <h3 class="title-text">Доставка</h3>
-              <p class="info-slider">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
-              <img src="img/delivery.png" width="389" height="283" alt="Доставка" class="visually-hidden"> <!--в css перенести-->
+              <p class="info-slider">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
             </div>
             <div class="garant visually-hidden">
               <h3 class="title-text">Гарантия</h3>
               <p class="info-slider">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-              <img src="img/garant.png" width="389" height="283" alt="Гарантия" class="visually-hidden"> <!--в css перенести-->
             </div>
             <div class="credit visually-hidden">
               <h3 class="title-text">Кредит</h3>
               <p class="info-slider">Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.</p>
               <a class="button btn-credit" href="#">Отправить заявку</a>
-              <img src="img/credit.png" width="465" height="285" alt="Кредит" class="visually-hidden">  <!--в css перенести-->
             </div>
           </div>
         </div>
